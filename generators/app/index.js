@@ -42,6 +42,10 @@ module.exports = class extends Generator {
   }
 
   writing() {
+    this.fs.copy(
+      this.templatePath('*/*[!*.ejs]'), 
+      this.destinationPath(`${this.destinationName}/`)
+    );
     this.fs.copyTpl(
       this.templatePath('contracts/MetaCoin.sol.ejs'),
       this.destinationPath(`${this.destinationName}/contracts/${this.tokenName}.sol`),
@@ -52,15 +56,15 @@ module.exports = class extends Generator {
   writePackagesJson() {
     const pkgJson = {
       devDependencies: {
-        eslint: '^3.15.0'
+        
       },
       dependencies: {
-        react: '^16.2.0'
+        
       }
     };
 
     // Extend or create package.json file in destination path
-    this.fs.extendJSON(this.destinationPath('package.json'), pkgJson);
+    this.fs.extendJSON(this.destinationPath(`${this.destinationName}/package.json`), pkgJson);
   }
 
   // installPackages() {
