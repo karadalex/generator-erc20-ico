@@ -35,10 +35,14 @@ module.exports = class extends Generator {
         message : 'Do you want to generate a React front-end app?'
       }
     ]).then((answers) => {
-      this.destinationName = dashify(answers.appName);
-      this.log('Destination folder', this.destinationName);
-      this.tokenName = answers.tokenName;
+      this.props = answers;
     });
+  }
+
+  configuring() {
+    this.destinationName = dashify(this.props.appName);
+    this.log('Destination folder', this.destinationName);
+    this.tokenName = this.props.tokenName;
   }
 
   writing() {
@@ -65,7 +69,14 @@ module.exports = class extends Generator {
     this.fs.extendJSON(this.destinationPath(`${this.destinationName}/package.json`), pkgJson);
   }
 
-  // install() {
-  //   this.yarnInstall();
-  // }
+  install() {
+    // Change directory
+    this.log(this.destinationRoot(this.destinationPath(this.destinationName)));
+    this.yarnInstall();
+
+    // Install front-end app, if user selected that option
+    if (this.props.frontEnd) {
+      this.composeWith(require.resolve('../front-end'));
+    }
+  }
 };
