@@ -1,9 +1,9 @@
 pragma solidity ^0.4.24;
 
 import "../Crowdsale.sol";
-import "../../token/ERC20/ERC20.sol";
-import "../../token/ERC20/ERC20Basic.sol";
-import "../../token/ERC20/SafeERC20.sol";
+import "../../ERC20.sol";
+import "../../ERC20Basic.sol";
+import "../../SafeERC20.sol";
 import "../../math/SafeMath.sol";
 /**
  * @title AllowanceCrowdsale
