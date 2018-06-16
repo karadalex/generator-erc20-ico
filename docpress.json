@@ -1,0 +1,14 @@
+{
+  "dist": "docs",
+  "docs": "md-docs",
+
+  "css": [
+    "style.css"
+  ],
+  "github": "karadalex/generator-erc20-ico",
+  "googleAnalytics": {
+    "id": "",
+    "domain": ""
+  },
+  "scripts": []
+}

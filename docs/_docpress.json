@@ -1,0 +1,146 @@
+{
+  "toc": {
+    "sections": [
+      {
+        "title": "Overview",
+        "source": "README.md",
+        "url": "index.html",
+        "slug": "index"
+      },
+      {
+        "title": "Installation",
+        "source": "md-docs/install.md",
+        "url": "install.html",
+        "slug": "install",
+        "headings": [
+          {
+            "title": "Requirements",
+            "depth": 2,
+            "id": "requirements"
+          }
+        ]
+      },
+      {
+        "title": "Architecture",
+        "source": "md-docs/architecture.md",
+        "url": "architecture.html",
+        "slug": "architecture"
+      },
+      {
+        "title": "Contracts",
+        "source": "md-docs/contracts.md",
+        "url": "contracts.html",
+        "slug": "contracts",
+        "headings": [
+          {
+            "title": "Inheritance",
+            "depth": 2,
+            "id": "inheritance"
+          }
+        ]
+      },
+      {
+        "title": "Front end",
+        "source": "md-docs/front-end.md",
+        "url": "front-end.html",
+        "slug": "front-end",
+        "headings": [
+          {
+            "title": "Install",
+            "depth": 2,
+            "id": "install"
+          }
+        ]
+      },
+      {
+        "title": "ICO Monitoring",
+        "source": "md-docs/monitor.md",
+        "url": "monitor.html",
+        "slug": "monitor"
+      },
+      {
+        "title": "Contributing",
+        "source": "md-docs/contribute.md",
+        "url": "contribute.html",
+        "slug": "contribute"
+      }
+    ]
+  },
+  "index": {
+    "index.html": {
+      "source": "README.md",
+      "title": "Overview",
+      "pageTitle": "Overview",
+      "slug": "index"
+    },
+    "install.html": {
+      "source": "md-docs/install.md",
+      "title": "Installation - Overview",
+      "pageTitle": "Installation",
+      "slug": "install",
+      "headings": [
+        {
+          "title": "Requirements",
+          "depth": 2,
+          "id": "requirements"
+        }
+      ]
+    },
+    "architecture.html": {
+      "source": "md-docs/architecture.md",
+      "title": "Architecture - Overview",
+      "pageTitle": "Architecture",
+      "slug": "architecture"
+    },
+    "contracts.html": {
+      "source": "md-docs/contracts.md",
+      "title": "Contracts - Overview",
+      "pageTitle": "Contracts",
+      "slug": "contracts",
+      "headings": [
+        {
+          "title": "Inheritance",
+          "depth": 2,
+          "id": "inheritance"
+        }
+      ]
+    },
+    "front-end.html": {
+      "source": "md-docs/front-end.md",
+      "title": "Front end - Overview",
+      "pageTitle": "Front end",
+      "slug": "front-end",
+      "headings": [
+        {
+          "title": "Install",
+          "depth": 2,
+          "id": "install"
+        }
+      ]
+    },
+    "monitor.html": {
+      "source": "md-docs/monitor.md",
+      "title": "ICO Monitoring - Overview",
+      "pageTitle": "ICO Monitoring",
+      "slug": "monitor"
+    },
+    "contribute.html": {
+      "source": "md-docs/contribute.md",
+      "title": "Contributing - Overview",
+      "pageTitle": "Contributing",
+      "slug": "contribute"
+    }
+  },
+  "sources": {
+    "README.md": "index.html",
+    "md-docs/install.md": "install.html",
+    "md-docs/architecture.md": "architecture.html",
+    "md-docs/contracts.md": "contracts.html",
+    "md-docs/front-end.md": "front-end.html",
+    "md-docs/monitor.md": "monitor.html",
+    "md-docs/contribute.md": "contribute.html",
+    "md-docs/inheritance-diagram.svg": "inheritance-diagram.svg",
+    "md-docs/inheritance.mermaid": "inheritance.mermaid",
+    "md-docs/style.css": "style.css"
+  }
+}

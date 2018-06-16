@@ -1,0 +1,4 @@
+## Requirements
+
+- NodeJs
+- Yarn
