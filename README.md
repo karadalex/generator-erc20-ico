@@ -1,6 +1,10 @@
 ERC20 ICO - Yeoman Generator
 =============================
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/karadalex/generator-erc20-ico/master/logo.png" width="60%"/>
+</p>
+
 Yeoman generator for your own ICO with a custom ERC20 token <br>
 
 Features:

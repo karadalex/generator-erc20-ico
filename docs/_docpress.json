@@ -5,7 +5,14 @@
         "title": "Overview",
         "source": "README.md",
         "url": "index.html",
-        "slug": "index"
+        "slug": "index",
+        "headings": [
+          {
+            "title": "Disclaimer",
+            "depth": 2,
+            "id": "disclaimer"
+          }
+        ]
       },
       {
         "title": "Installation",
@@ -71,7 +78,14 @@
       "source": "README.md",
       "title": "Overview",
       "pageTitle": "Overview",
-      "slug": "index"
+      "slug": "index",
+      "headings": [
+        {
+          "title": "Disclaimer",
+          "depth": 2,
+          "id": "disclaimer"
+        }
+      ]
     },
     "install.html": {
       "source": "md-docs/install.md",
