@@ -21,15 +21,28 @@ module.exports = class extends Generator {
         default : this.defaultAppname // Default to current folder name
       },
     ]).then((answers) => {
-      this.destinationName = dashify(answers.appName);
-      this.log('Destination folder', this.destinationName);
+      this.props = answers;
     });
+  }
+
+  configuring() {
+    this.destinationName = dashify(this.props.appName);
+    this.log('Destination folder', this.destinationName);
+    this.tokenName = this.props.tokenName;
   }
 
   writing() {
     this.fs.copy(
       this.templatePath('./!(node_modules)'), 
       this.destinationPath(this.destinationName)
+    );
+
+    this.fs.copyTpl(
+      this.templatePath('gatsby-config.js.ejs'),
+      this.destinationPath(`${this.destinationName}/gatsby-config.js`),
+      { 
+        siteTitle: this.props.appName 
+      }
     );
 
     const pkgJson = {
