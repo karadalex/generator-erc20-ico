@@ -17,7 +17,7 @@ module.exports = class extends Generator {
       {
         type    : 'input',
         name    : 'appName',
-        message : 'Your project name',
+        message : 'Front-end app name',
         default : this.defaultAppname // Default to current folder name
       },
     ]).then((answers) => {
