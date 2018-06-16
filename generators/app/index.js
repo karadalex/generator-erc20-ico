@@ -51,9 +51,7 @@ module.exports = class extends Generator {
       this.destinationPath(`${this.destinationName}/contracts/${this.tokenName}.sol`),
       { tokenName: this.tokenName }
     );
-  }
 
-  writePackagesJson() {
     const pkgJson = {
       devDependencies: {
         
@@ -67,7 +65,7 @@ module.exports = class extends Generator {
     this.fs.extendJSON(this.destinationPath(`${this.destinationName}/package.json`), pkgJson);
   }
 
-  // installPackages() {
+  // install() {
   //   this.yarnInstall();
   // }
 };
