@@ -8,6 +8,7 @@ Features:
 2. Create crowdsale contract
 3. Create ReactJS static front-end app with GatsbyJS, optional (coming soon)
 4. Monitor ICO (coming soon)
+5. Create telegram channel (coming soon)
 
 
 ## Disclaimer
