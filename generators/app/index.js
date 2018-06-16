@@ -9,7 +9,9 @@ module.exports = class extends Generator {
     super(args, opts);
 
     this.defaultAppname = "MyTokenIco";
-    this.defaultTokenName = "MyToken";
+    this.defaultTokenName = "Token Name";
+    this.defaultTokenSymbol = "SYM";
+    this.defaultTokenSupply = 1000000;
 
     this.destinationName = dashify(this.defaultAppname);
     this.tokenName;
@@ -26,9 +28,21 @@ module.exports = class extends Generator {
       {
         type    : 'input',
         name    : 'tokenName',
-        message : 'Token name',
+        message : 'Provide token name',
         default : this.defaultTokenName
+      },
+      {
+        type    : 'input',
+        name    : 'tokenSymbol',
+        message : 'Provide token symbol',
+        default : this.defaultTokenSymbol
       }, 
+      {
+        type    : 'input',
+        name    : 'tokenSupply',
+        message : 'Provide total token supply. Input will be multiplied by 10^18!',
+        default : this.defaultTokenSupply
+      },
       {
         type    : 'confirm',
         name    : 'frontEnd',
@@ -51,9 +65,11 @@ module.exports = class extends Generator {
       this.destinationPath(`${this.destinationName}/`)
     );
     this.fs.copyTpl(
-      this.templatePath('contracts/MetaCoin.sol.ejs'),
+      this.templatePath('contracts/MintableToken.sol.ejs'),
       this.destinationPath(`${this.destinationName}/contracts/${this.tokenName}.sol`),
-      { tokenName: this.tokenName }
+      { 
+        tokenName: this.tokenName 
+      }
     );
 
     const pkgJson = {
